@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra Papel e Tesoura</title>
+    <link rel="icon" href="/favicons/favicon-16x16.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
+
+</head>
+<body>
+
+    <div id="game" class="container">
+        <h1>Pedra Papel Tesoura</h1>
+        <div class="bloco">
+            <div class="label bg-green">USER</div>
+            <div class="label bg-red">PC</div>
+            <div id="contador" class="placar">0:0</div>
+        </div>
+
+        <div class="bloco bg-grey selected-image">
+            <div id="user">
+                <img src="/images/rock.png">
+            </div>
+
+            <div id="pc" class="reverse">
+            </div>
+        </div>
+
+        <h2>Escolha seu movimento</h2>
+        <div class="buttons">
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="rock" checked>
+                <button class="btn"><img src="/images/rock.png" alt="imagem representando a mão fechada"></button>
+            </label>
+
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="paper">
+                <button class="btn"><img src="/images/paper.png" alt="imagem representando a mão abertea"></button>
+            </label>
+
+            <label>
+                <input type="radio" onclick="reset()" name="" value="scissor">
+                <button class="btn"><img src="/images/scissor.png" alt="imagem representando a mão no formato de tesoura "></button>
+            </label>
+        </div>
+
+        <div class="bloco">
+            <button id="playng" class="btn-play">Jogar</button>
+        </div>
+
+    </div>
+
+    <div id="winner" class="container end-screen none">
+        <span>🏆🏆🏆</span>
+        <h3> Você Ganhou </h3>
+        <button onclick="newGame()">Jogar Novamente</button>
+    </div>
+
+    <div id="loser" class="container end-screen none">
+        <h3>Você Perdeu !</h3>
+        <button onclick="newGame()">Jogar Novamente</button>
+    
+    </div>
+
+</body>
+</html>
